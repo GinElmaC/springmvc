@@ -1,0 +1,8 @@
+# Project exclude paths
+/spring-002/target/
+/spring-003/target/
+/spring-004/target/
+/spring-005-turn/target/
+/spring-007-userPro/target/
+/springmvc-001/target/
+/springmvc-005-RESTful/target/

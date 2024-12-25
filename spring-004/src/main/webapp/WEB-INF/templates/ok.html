@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>展示从Requset中取出的数据</h1>
+<div th:text="${testServletAPI}"></div>
+<h1>展示从Session中取出的数据</h1>
+<div th:text="${session.testSession}"></div>
+<h1>展示从Application中取出的数据</h1>
+<div th:text="${application.testApplication}"></div>
+</body>
+</html>

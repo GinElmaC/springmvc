@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang = "en" xmln:th = "http://www.thymeleaf.org">
+    <head>
+        <title>first SpringMVC</title>
+    </head>
+    <body>
+        <h1>First SpringMVC</h1>
+        <a th:href="@{/haha}">haha</a>
+        <a th:href="@{/test}">test</a>
+    </body>
+</html>

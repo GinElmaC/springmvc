@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>测试RESTful风格</h1>
+<a th:href="@{/user}">查询用户列表</a><br>
+<a th:href="@{/user/1}">查询id=1用户</a><br>
+<form th:action="@{/user}" method="get">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    年龄：<input type="text" name="age"><br>
+    <input type="submit" value="提交">
+</form>
+<form th:action="@{/user}" method="post">
+    <!--隐藏域-->
+    <input type="hidden" name="_method" value="PUT">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    年龄：<input type="text" name="age"><br>
+    <input type="submit" value="提交">
+</form>
+
+
+
+<a th:href="@{/user/1}" onclick="del(event)" methods="POST">删除用户id=1的信息</a>
+<form id="delForm" method="POST">
+    <input type="hidden" name="_method" value="delete">
+</form>
+<script>
+    function del(event){
+        //获取表单
+        let delForm = document.getElementById("delForm");
+        //给form的action赋值
+        delFoem.action = event.target.href;
+        //发送post请求提交表单
+        delForm.submit();
+        //非常重要，阻止超链接的默认行为,要不然会跳转走
+        event.preventDefault();
+    }
+</script>
+</body>
+</html>

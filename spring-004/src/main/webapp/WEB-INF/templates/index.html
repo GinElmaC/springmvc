@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试三个域</title>
+</head>
+<body>
+<h1>测试三个域</h1>
+<h1>测试Request</h1>
+<a th:href="@{/testServletAPI}">测试原生ServletAPI</a>
+<a th:href="@{/testModel}">测试model方法</a>
+<a th:href="@{/testMap}">测试Map方法</a>
+<a th:href="@{/testModelMap}">测试ModelMap方法</a>
+<a th:href="@{/testModelandView}">测试ModelandView方法</a>
+
+<h1>测试Session</h1>
+<a th:href="@{/testSessionServletAPI}">测试原生ServletAPI</a>
+<a th:href="@{/testSessionAttributes}">测试SessionAttributes方法</a>
+
+<h1>测试Application</h1>
+<a th:href="@{/testApplicationServletAPI}">测试ServletAPI方法</a>
+</body>
+</html>
